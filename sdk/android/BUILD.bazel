@@ -1,0 +1,36 @@
+
+cc_library(
+    name = "jni",
+    srcs = glob([
+        "jni/**/*.cpp",
+    ]),
+    hdrs = glob([
+        "jni/**/*.hpp",
+    ]),
+    copts = [
+        "-std=c++14",
+    ],
+    linkopts = [
+		"-latomic",
+    ],
+    visibility = ["//visibility:private"],
+    deps = [
+        "//core",
+    ],
+)
+
+android_library(
+    name = "sdk",
+    srcs = glob([
+        "java/**/*.java",
+    ]),
+    manifest = "AndroidManifest.xml",
+	custom_package = "co.ffreling.bazelide",
+    resource_files = glob([
+        "res/**",
+    ]),
+    visibility = ["//visibility:public"],
+    deps = [
+        ":jni",
+    ],
+)

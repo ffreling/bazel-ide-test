@@ -1,0 +1,8 @@
+cc_library(
+	name = "core",
+	deps = [
+		"//core/foo",
+		"//core/bar"
+	],
+	visibility = ["//visibility:public"],
+)

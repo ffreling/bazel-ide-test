@@ -1,0 +1,26 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_static_framework")
+
+objc_library(
+    name = "sdk",
+    hdrs = glob([
+        "CustomController.h",
+        "CustomView.h",
+    ]),
+    srcs = glob([
+        "CustomController.mm",
+        "CustomView.mm",
+    ]),
+    copts = [
+        "-std=c++14",
+        "-fmodules",
+        "-fcxx-modules",
+    ],
+    enable_modules = 1,
+    sdk_frameworks = [
+        "UIKit",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//core",
+    ],
+)

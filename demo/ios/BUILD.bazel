@@ -1,0 +1,36 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
+load("@build_bazel_rules_apple//apple:swift.bzl", "swift_library")
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
+
+swift_library(
+    name = "demo_lib",
+    visibility = [
+        "//visibility:private",
+    ],
+    srcs = [
+        "AppDelegate.swift",
+    ],
+    deps = [
+        "//sdk/ios:sdk"
+    ],
+    resources = [
+        "Resources/Storyboards/Main.storyboard",
+    ],
+)
+
+ios_application(
+    name = "demo",
+    visibility = ["//visibility:public"],
+    bundle_id = "co.ffreling.bazelide.demo",
+    families = [
+        "iphone"
+    ],
+    infoplists = [
+        "Info.plist"
+    ],
+    minimum_os_version = "9.3",
+    launch_storyboard = "Resources/Storyboards/LaunchScreen.storyboard",
+    deps = [
+        ":demo_lib",
+    ],
+)

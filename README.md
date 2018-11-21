@@ -19,6 +19,11 @@ Current environment:
 - bazel: 0.19.0
 - [Android Studio plugin](https://plugins.jetbrains.com/plugin/9185-bazel): 2018.10.22.0.2
 - Xcode: 10.1
+- [Tulsi](https://tulsi.bazel.build/): revision c8434bbbac6958a51e50d60b176c216f4054897d
 
 ## Android Studio
 - [ ] https://github.com/bazelbuild/intellij/issues/295
+
+## Xcode
+- [ ] https://github.com/bazelbuild/tulsi/issues/15
+- [ ] https://github.com/bazelbuild/tulsi/issues/16

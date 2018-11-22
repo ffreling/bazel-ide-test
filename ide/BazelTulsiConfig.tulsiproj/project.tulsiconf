@@ -1,0 +1,14 @@
+{
+  "packages" : [
+    "demo/ios",
+    "sdk/ios",
+    "core"
+  ],
+  "configDefaults" : {
+    "optionSet" : {
+
+    }
+  },
+  "workspaceRoot" : "../..",
+  "projectName" : "BazelXcode"
+}

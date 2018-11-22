@@ -9,6 +9,7 @@ swift_library(
     ],
     srcs = [
         "AppDelegate.swift",
+        "ViewController.swift",
     ],
     deps = [
         "//sdk/ios:sdk"

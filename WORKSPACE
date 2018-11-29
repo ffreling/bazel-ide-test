@@ -29,8 +29,8 @@ git_repository(
 
 git_repository(
     name = "build_bazel_rules_swift",
-    commit = "7bbcf9584613169cda709b9c217f5ac29cc5a089",
     remote = "https://github.com/bazelbuild/rules_swift.git",
+    tag = "0.4.0",
 )
 
 git_repository(
@@ -68,3 +68,10 @@ maven_jar(
     name = "junit4",
     artifact = "junit:junit:4.12",
 )
+
+load(
+    "@build_bazel_rules_swift//swift:repositories.bzl",
+    "swift_rules_dependencies",
+)
+
+swift_rules_dependencies()

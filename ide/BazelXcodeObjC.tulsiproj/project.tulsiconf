@@ -1,0 +1,17 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+      "BazelBuildOptionsDebug" : {
+        "p" : "--config debug"
+      },
+      "BazelBuildOptionsRelease" : {
+        "p" : "--config release"
+      }
+    }
+  },
+  "packages" : [
+    "demo/ios-objc"
+  ],
+  "projectName" : "BazelXcodeObjC",
+  "workspaceRoot" : "../.."
+}

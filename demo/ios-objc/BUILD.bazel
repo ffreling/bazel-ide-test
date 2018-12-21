@@ -1,0 +1,46 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
+
+objc_library(
+    name = "demo_objc_lib",
+    visibility = [
+        "//visibility:private",
+    ],
+    srcs = [
+        "AppDelegate.h",
+        "AppDelegate.m",
+        "ViewController.h",
+        "ViewController.mm",
+        "main.m",
+    ],
+    copts = [
+        "-ObjC++",
+        "-std=c++14",
+    ],
+    sdk_frameworks = [
+        "UIKit",
+    ],
+    deps = [
+        "//sdk/ios:sdk"
+    ],
+    resources = [
+        "Resources/Storyboards/Main.storyboard",
+    ],
+)
+
+ios_application(
+    name = "demo_objc",
+    visibility = ["//visibility:public"],
+    bundle_id = "co.ffreling.bazelide.demo.objc",
+    families = [
+        "iphone"
+    ],
+    infoplists = [
+        "Info.plist"
+    ],
+    minimum_os_version = "9.3",
+    launch_storyboard = "Resources/Storyboards/LaunchScreen.storyboard",
+    deps = [
+        ":demo_objc_lib",
+    ],
+)

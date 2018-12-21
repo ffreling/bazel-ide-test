@@ -1,14 +1,17 @@
 {
-  "packages" : [
-    "demo/ios",
-    "sdk/ios",
-    "core"
-  ],
+  "projectName" : "BazelXcode",
+  "workspaceRoot" : "../..",
   "configDefaults" : {
     "optionSet" : {
-
+      "BazelBuildOptionsDebug" : {
+        "p" : "--config debug"
+      },
+      "BazelBuildOptionsRelease" : {
+        "p" : "--config release"
+      }
     }
   },
-  "workspaceRoot" : "../..",
-  "projectName" : "BazelXcode"
+  "packages" : [
+    "demo/ios-swift"
+  ]
 }

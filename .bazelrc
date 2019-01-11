@@ -1,8 +1,6 @@
 build                   --verbose_failures
 build                   --ios_minimum_os=10.0
 build                   --xcode_version=10.0.0
-build                   --strategy=SwiftCompile=standalone
-build                   --strategy=ObjCCompile=standalone
 
 build:android_device    --fat_apk_cpu=arm64-v8a,armeabi-v7a,x86,x86_64
 build:ios_simulator     --ios_multi_cpus=i386,x86_64
@@ -12,6 +10,9 @@ build:debug             --compilation_mode=dbg
 build:profile           --compilation_mode=opt
 build:profile           --copt=-DPROFILE
 build:release           --compilation_mode=opt
+
+build:tulsi             --strategy=SwiftCompile=standalone
+build:tulsi             --strategy=ObjCCompile=standalone
 
 build:android_arm64     --crosstool_top=@androidndk//:toolchain-libcpp
 build:android_arm64     --host_crosstool_top=@bazel_tools//tools/cpp:toolchain

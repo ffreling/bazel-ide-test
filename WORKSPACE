@@ -13,7 +13,7 @@ http_archive(
 
 load("@bazel_skylib//lib:versions.bzl", "versions")
 
-versions.check("0.16.1")
+versions.check("0.21")
 
 git_repository(
     name = "bazel_skylib",
@@ -23,15 +23,30 @@ git_repository(
 
 git_repository(
     name = "build_bazel_rules_apple",
-    commit = "8de147088c67328f2043e2fedd8cb14d490634ae",
-    remote = "https://github.com/znly/rules_apple.git",
+    remote = "https://github.com/bazelbuild/rules_apple.git",
+    tag = "0.12.0",
 )
 
-git_repository(
-    name = "build_bazel_rules_swift",
-    remote = "https://github.com/bazelbuild/rules_swift.git",
-    tag = "0.4.0",
+load(
+    "@build_bazel_rules_apple//apple:repositories.bzl",
+    "apple_rules_dependencies",
 )
+
+apple_rules_dependencies()
+
+load(
+    "@build_bazel_rules_swift//swift:repositories.bzl",
+    "swift_rules_dependencies",
+)
+
+swift_rules_dependencies()
+
+load(
+    "@build_bazel_apple_support//lib:repositories.bzl",
+    "apple_support_dependencies",
+)
+
+apple_support_dependencies()
 
 git_repository(
     name = "build_bazel_tulsi",
@@ -68,10 +83,3 @@ maven_jar(
     name = "junit4",
     artifact = "junit:junit:4.12",
 )
-
-load(
-    "@build_bazel_rules_swift//swift:repositories.bzl",
-    "swift_rules_dependencies",
-)
-
-swift_rules_dependencies()

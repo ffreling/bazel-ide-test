@@ -19,7 +19,7 @@ Current environment:
 - bazel: 0.21.0
 - [Android Studio plugin](https://plugins.jetbrains.com/plugin/9185-bazel): 2018.10.22.0.2
 - Xcode: 10.1
-- [Tulsi](https://tulsi.bazel.build/): revision 5efe35fd73e80550d9b4d1d65adb3584082f9f04
+- [Tulsi](https://tulsi.bazel.build/): revision [a21ddce35e3403ce5f9d7bba9b0f74500a861e52](https://github.com/bazelbuild/tulsi/commit/a21ddce35e3403ce5f9d7bba9b0f74500a861e52)
 
 ## Android Studio
 - [ ] https://github.com/bazelbuild/intellij/issues/295
@@ -27,3 +27,4 @@ Current environment:
 ## Xcode
 - [X] [Swift breakpoints](https://github.com/bazelbuild/tulsi/issues/15)
 - [ ] [Objective-C breakpoints](https://github.com/bazelbuild/tulsi/issues/16)
+- [ ] Cannot map source in profiling

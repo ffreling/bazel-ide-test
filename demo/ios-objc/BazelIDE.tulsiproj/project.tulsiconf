@@ -1,0 +1,17 @@
+{
+  "packages" : [
+    "demo/ios-objc"
+  ],
+  "configDefaults" : {
+    "optionSet" : {
+      "BazelBuildOptionsDebug" : {
+        "p" : "--config tulsi --config debug"
+      },
+      "BazelBuildOptionsRelease" : {
+        "p" : "--config tulsi --config release"
+      }
+    }
+  },
+  "projectName" : "BazelIDE",
+  "workspaceRoot" : "../../.."
+}

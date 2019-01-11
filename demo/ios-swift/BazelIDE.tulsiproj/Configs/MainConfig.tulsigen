@@ -1,0 +1,52 @@
+{
+  "sourceFilters" : [
+    "core/...",
+    "demo/...",
+    "sdk/..."
+  ],
+  "additionalFilePaths" : [
+    "demo/ios-swift/BUILD"
+  ],
+  "projectName" : "BazelIDE",
+  "optionSet" : {
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "buildTargets" : [
+    "//demo/ios-swift:demo"
+  ]
+}

@@ -1,52 +1,52 @@
 {
+  "sourceFilters" : [
+    "core/...",
+    "demo/...",
+    "sdk/..."
+  ],
   "additionalFilePaths" : [
     "demo/ios-objc/BUILD"
   ],
+  "projectName" : "BazelIDE",
   "optionSet" : {
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
     "BazelBuildOptionsDebug" : {
       "p" : "$(inherited)"
     },
     "BazelBuildStartupOptionsDebug" : {
       "p" : "$(inherited)"
     },
-    "LaunchActionPostActionScript" : {
-      "p" : "$(inherited)"
-    },
-    "CommandlineArguments" : {
+    "BuildActionPostActionScript" : {
       "p" : "$(inherited)"
     },
     "TestActionPreActionScript" : {
       "p" : "$(inherited)"
     },
-    "LaunchActionPreActionScript" : {
-      "p" : "$(inherited)"
-    },
-    "BuildActionPreActionScript" : {
-      "p" : "$(inherited)"
-    },
-    "TestActionPostActionScript" : {
-      "p" : "$(inherited)"
-    },
-    "BazelBuildOptionsRelease" : {
-      "p" : "$(inherited)"
-    },
-    "BazelBuildStartupOptionsRelease" : {
-      "p" : "$(inherited)"
-    },
     "EnvironmentVariables" : {
-      "p" : "$(inherited)"
-    },
-    "BuildActionPostActionScript" : {
       "p" : "$(inherited)"
     }
   },
-  "projectName" : "BazelXcodeObjC",
   "buildTargets" : [
     "//demo/ios-objc:demo_objc"
-  ],
-  "sourceFilters" : [
-    "core/...",
-    "demo/ios-objc/...",
-    "sdk/..."
   ]
 }

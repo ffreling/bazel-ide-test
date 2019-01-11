@@ -1,4 +1,4 @@
-package co.ffreling.bazel-ide-test.sdk;
+package co.ffreling.bazelide;
 
 import android.content.Context;
 import android.view;

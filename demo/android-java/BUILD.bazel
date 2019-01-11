@@ -1,0 +1,17 @@
+android_binary(
+    name = "sampleapp",
+    visibility = [
+        "//visibility:public",
+    ],
+    srcs = glob([
+        "java/**/*.java",
+    ]),
+    custom_package = "co.ffreling.bazelide.demo",
+    manifest = "AndroidManifest.xml",
+    resource_files = glob(["res/**"]),
+    deps = [
+        "//sdk/android:bazelide",
+        "@com_android_support_appcompat_v7//:library",
+        "@com_android_support_constraint_constraint_layout//:library",
+    ],
+)

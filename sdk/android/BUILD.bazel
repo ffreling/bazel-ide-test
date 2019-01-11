@@ -1,4 +1,3 @@
-
 cc_library(
     name = "jni",
     srcs = glob([
@@ -20,12 +19,12 @@ cc_library(
 )
 
 android_library(
-    name = "sdk",
+    name = "bazelide",
     srcs = glob([
         "java/**/*.java",
     ]),
     manifest = "AndroidManifest.xml",
-	custom_package = "co.ffreling.bazelide",
+    custom_package = "co.ffreling.bazelide",
     resource_files = glob([
         "res/**",
     ]),
